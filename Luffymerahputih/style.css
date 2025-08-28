@@ -1,0 +1,25 @@
+/* Hapus margin default dan buat background hitam */
+body {
+    margin: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Bungkus gambar agar animasi bisa diputar */
+.flag img {
+    width: 100vw;  /* fullscreen */
+    height: auto;
+    animation: wave 3s infinite ease-in-out;
+}
+
+/* Efek berkibar */
+@keyframes wave {
+    0%   { transform: rotateZ(0deg) scale(1); }
+    25%  { transform: rotateZ(1deg) scale(1.01); }
+    50%  { transform: rotateZ(0deg) scale(1); }
+    75%  { transform: rotateZ(-1deg) scale(1.01); }
+    100% { transform: rotateZ(0deg) scale(1); }
+}
